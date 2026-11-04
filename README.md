@@ -1,57 +1,73 @@
-﻿# Calculadora Web Modularizada (Python, Flask, HTML e JavaScript)
+# Calculadora Web Modularizada (Python, Flask, HTML e JavaScript)
 
-Projeto desenvolvido para a disciplina de ProgramaÃ§Ã£o / Desenvolvimento Web, baseado no repositÃ³rio de exemplo do Professor Victor Thomaz.
+![Python Flask CI](https://github.com/gust4m0t4/Trabalho-Gustavo/actions/workflows/ci.yml/badge.svg)
+
+Projeto desenvolvido para a disciplina de Programação / Desenvolvimento Web, baseado no repositório de exemplo do Professor Victor Thomaz.
 
 ---
 
-## ðŸ‘¨â€ðŸ’» Autor
+## 👨‍💻 Autor
 - **Aluno:** Gustavo Mota
-- **Curso:** CiÃªncia da ComputaÃ§Ã£o (2Âº PerÃ­odo)
+- **Curso:** Ciência da Computação (2º Período)
 
 ---
 
-## ðŸ“– DescriÃ§Ã£o
-AplicaÃ§Ã£o web interativa desenvolvida com **Flask (Python)** no backend e **HTML5 + JavaScript** no frontend. O sistema adota uma arquitetura modularizada em que cada operaÃ§Ã£o matemÃ¡tica possui sua prÃ³pria interface e rota dedicada, comunicando-se de forma assÃ­ncrona com o servidor via API (JSON).
+## 📖 Descrição
+Aplicação web interativa desenvolvida com **Flask (Python)** no backend e **HTML5 + JavaScript** no frontend. O sistema adota uma arquitetura modularizada em que cada operação matemática possui sua própria interface e rota dedicada, comunicando-se de forma assíncrona com o servidor via API (JSON).
 
-### OperaÃ§Ãµes DisponÃ­veis:
-- **Soma:** Realiza a adiÃ§Ã£o de dois nÃºmeros.
-- **SubtraÃ§Ã£o:** Realiza a subtraÃ§Ã£o de dois nÃºmeros.
-- **MultiplicaÃ§Ã£o:** Realiza a multiplicaÃ§Ã£o de dois nÃºmeros.
-- **DivisÃ£o:** Realiza a divisÃ£o com tratamento de erro para divisÃ£o por zero.
+O projeto conta com integração contínua (**CI**) via **GitHub Actions**, executando testes automatizados a cada push ou pull request nas branches `main` e `gustavo_mota`.
+
+### Operações Disponíveis:
+- **Soma:** Realiza a adição de dois números.
+- **Subtração:** Realiza a subtração de dois números.
+- **Multiplicação:** Realiza a multiplicação de dois números.
+- **Divisão:** Realiza a divisão com tratamento de erro para divisão por zero.
 
 ---
 
-## ðŸ› ï¸ Requisitos
+## 🛠️ Requisitos
 - Python 3 instalado
 - Ambiente virtual (`venv`)
-- DependÃªncias listadas em `requirements.txt` (Flask)
+- Dependências listadas em `requirements.txt` (Flask, PyTest)
 
 ---
 
-## ðŸ“ Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
-projeto_calculadora_js_nav/
-â”‚
-â”œâ”€â”€ app.py                   # InicializaÃ§Ã£o do Flask e definiÃ§Ã£o de rotas e APIs
-â”œâ”€â”€ operacoes.py             # MÃ³dulo com a lÃ³gica das operaÃ§Ãµes matemÃ¡ticas
-â”œâ”€â”€ requirements.txt         # DependÃªncias do projeto (Flask)
-â”œâ”€â”€ README.md                # DocumentaÃ§Ã£o e identificaÃ§Ã£o do autor
-â”œâ”€â”€ templates/               # Interfaces HTML (RenderizaÃ§Ã£o via Jinja2)
-â”‚   â”œâ”€â”€ index.html           # PÃ¡gina inicial com menu de navegaÃ§Ã£o
-â”‚   â”œâ”€â”€ soma.html            # Interface para cÃ¡lculo de soma
-â”‚   â”œâ”€â”€ subtracao.html       # Interface para cÃ¡lculo de subtraÃ§Ã£o
-â”‚   â”œâ”€â”€ multiplicacao.html   # Interface para cÃ¡lculo de multiplicaÃ§Ã£o
-â”‚   â””â”€â”€ divisao.html         # Interface para cÃ¡lculo de divisÃ£o
-â””â”€â”€ static/                  # Arquivos estÃ¡ticos
-    â””â”€â”€ script.js            # RequisiÃ§Ãµes assÃ­ncronas (fetch) para a API Flask
+Trabalho-Gustavo/
+│
+├── .github/workflows/
+│   └── ci.yml               # Pipeline de CI/CD do GitHub Actions
+├── app.py                   # Inicialização do Flask e definição de rotas e APIs
+├── operacoes.py             # Módulo com a lógica das operações matemáticas
+├── test_operacoes.py        # Testes unitários automatizados com PyTest
+├── requirements.txt         # Dependências do projeto (Flask, PyTest)
+├── .gitignore               # Arquivos e pastas ignorados pelo Git
+├── README.md                # Documentação e identificação do autor
+├── templates/               # Interfaces HTML (Renderização via Jinja2)
+│   ├── index.html           # Página inicial com menu de navegação
+│   ├── soma.html            # Interface para cálculo de soma
+│   ├── subtracao.html       # Interface para cálculo de subtração
+│   ├── multiplicacao.html   # Interface para cálculo de multiplicação
+│   └── divisao.html         # Interface para cálculo de divisão
+└── static/                  # Arquivos estáticos
+    └── script.js            # Requisições assíncronas (fetch) para a API Flask
 ```
 
 ---
 
-## ðŸš€ Como Executar o Projeto Localmente
+## 🧪 Executando os Testes Unitários
+Para rodar a bateria de testes automatizados localmente:
+```powershell
+pytest test_operacoes.py -v
+```
 
-### 1. Clonar o repositÃ³rio
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+### 1. Clonar o repositório
 ```bash
 git clone https://github.com/gust4m0t4/Trabalho-Gustavo.git
 cd Trabalho-Gustavo
@@ -64,12 +80,12 @@ python -m venv .venv
 ```
 *(Se estiver usando Prompt de Comando cmd: `.venv\Scripts\activate.bat`)*
 
-### 3. Instalar as dependÃªncias
+### 3. Instalar as dependências
 ```powershell
 pip install -r requirements.txt
 ```
 
-### 4. Iniciar a aplicaÃ§Ã£o
+### 4. Iniciar a aplicação
 ```powershell
 python app.py
 ```
@@ -79,4 +95,3 @@ Abra o navegador e acesse:
 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 Pressione `Ctrl + C` no terminal para encerrar o servidor.
-

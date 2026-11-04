@@ -1,32 +1,74 @@
-# Ignorar ambiente virtual
+# ==========================================
+# GitIgnore para Projeto Python / Flask
+# Aluno: Gustavo Mota
+# ==========================================
+
+# Ambientes Virtuais (Virtual Environments)
 .venv/
 venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# Ignorar arquivos compilados do Python
+# Byte-compiled / arquivos otimizados do Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
-# Ignorar arquivos de configuração locais
-*.env
+# Distribuição e empacotamento
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de log
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Arquivos de teste e cobertura (Coverage / PyTest)
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+.venv*
 *.local
 
-# Ignorar logs
-*.log
+# Configurações de IDEs e Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Ignorar arquivos temporários do sistema
+# Arquivos temporários do Sistema Operacional
 .DS_Store
 Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
 
-# Ignorar arquivos de cache do VS Code
-.vscode/
-
-# Ignorar arquivos de testes temporários
-.coverage
-*.coverage
-.cache/
-
-# Scripts auxiliares locais
+# Scripts de automação local
 *.bat
 *.ps1
