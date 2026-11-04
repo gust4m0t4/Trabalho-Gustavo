@@ -34,5 +34,18 @@ def subtracao():
     resultado = operacoes.calcular_subtracao(valor1, valor2)
     return jsonify({"resultado": resultado})
 
+# PÃ¡gina de multiplicaÃ§Ã£o
+@app.route("/multiplicacao")
+def multiplicacao_page():
+    return render_template("multiplicacao.html")
+
+@app.route("/api/multiplicacao", methods=["POST"])
+def multiplicacao():
+    dados = request.get_json()
+    valor1 = float(dados["valor1"])
+    valor2 = float(dados["valor2"])
+    resultado = operacoes.calcular_multiplicacao(valor1, valor2)
+    return jsonify({"resultado": resultado})
+
 if __name__ == "__main__":
     app.run(debug=True)
