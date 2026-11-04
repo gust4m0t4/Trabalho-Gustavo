@@ -1,0 +1,21 @@
+﻿=====================================================
+TRABALHO: CALCULADORA WEB COM PYTHON, FLASK E GIT
+DISCIPLINA: DESENVOLVIMENTO WEB / PROGRAMAÃ‡ÃƒO
+PROFESSOR: VICTOR THOMAZ
+=====================================================
+
+Aluno: Gustavo Mota
+Curso: CiÃªncia da ComputaÃ§Ã£o - 2Âº PerÃ­odo
+
+Link do RepositÃ³rio PÃºblico no GitHub:
+https://github.com/gust4m0t4/Trabalho-Gustavo.git
+
+-----------------------------------------------------
+DescriÃ§Ã£o da Entrega:
+- AplicaÃ§Ã£o web com Flask, HTML e JavaScript.
+- OperaÃ§Ãµes implementadas: Soma, SubtraÃ§Ã£o, MultiplicaÃ§Ã£o e DivisÃ£o.
+- Cada operaÃ§Ã£o possui pÃ¡gina dedicada e navegaÃ§Ã£o pelo menu superior.
+- Tratamento de divisÃ£o por zero na operaÃ§Ã£o de divisÃ£o.
+- HistÃ³rico de commits detalhado no repositÃ³rio com branch do aluno.
+=====================================================
+
