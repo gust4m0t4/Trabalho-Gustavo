@@ -1,5 +1,10 @@
 ﻿from flask import Flask, request, jsonify, render_template
-import operacoes
+import operacoes  # importa funÃ§Ãµes do arquivo separado
+
+# Como executar:
+# 1. Certifique-se de ter o Flask instalado: pip install flask
+# 2. Execute este arquivo: python app.py
+# python.exe -m pip install --upgrade pip
 
 app = Flask(__name__)
 
@@ -47,5 +52,19 @@ def multiplicacao():
     resultado = operacoes.calcular_multiplicacao(valor1, valor2)
     return jsonify({"resultado": resultado})
 
+# PÃ¡gina de divisÃ£o
+@app.route("/divisao")
+def divisao_page():
+    return render_template("divisao.html")
+
+@app.route("/api/divisao", methods=["POST"])
+def divisao():
+    dados = request.get_json()
+    valor1 = float(dados["valor1"])
+    valor2 = float(dados["valor2"])
+    resultado = operacoes.calcular_divisao(valor1, valor2)
+    return jsonify({"resultado": resultado})
+
 if __name__ == "__main__":
     app.run(debug=True)
+

@@ -8,3 +8,9 @@ def calcular_subtracao(a, b):
 
 def calcular_multiplicacao(a, b):
     return a * b
+
+def calcular_divisao(a, b):
+    if b == 0:
+        return "Erro: DivisÃ£o por zero nÃ£o Ã© permitida"
+    return a / b
+
