@@ -1,0 +1,28 @@
+# Ignorar ambiente virtual
+.venv/
+venv/
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos de configuração locais
+*.env
+*.local
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de cache do VS Code
+.vscode/
+
+# Ignorar arquivos de testes temporários
+.coverage
+*.coverage
+.cache/
